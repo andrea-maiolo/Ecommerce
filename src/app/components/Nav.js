@@ -11,7 +11,9 @@ const Nav = (props) => {
           <Link to={"/"}>home</Link>
           <Link to={"/products"}>products</Link>
           <Link to={"/contacts"}>contacts</Link>
-          <Link to={"/cart"}>cart</Link>
+          <Link id="cart" to={"/cart"}>
+            cart {props.cartL}
+          </Link>
         </div>
       </div>
     </div>

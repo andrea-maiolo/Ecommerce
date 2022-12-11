@@ -3,18 +3,15 @@ import React, { useState, useEffect } from "react";
 import ProductCard from "./ProductCard";
 import ReactLoading from "react-loading";
 import Footer from "./Footer";
-// import CartDom from "./CartDom";
 
 const Products = () => {
   const thing = useOutletContext();
   console.log(thing);
   const { num, increaseNum, decreaseNum } = thing;
-  // const { num, increaseNum, decreaseNum } = thing.stateObj;
 
   //this is the old code
   const [products, setProducts] = useState([]);
   const [tempProducts, setTempProducts] = useState([]);
-  //const [cart, setCart] = React.useState([]);
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/category/electronics?sort=asce")
@@ -49,8 +46,6 @@ const Products = () => {
         price={product.price}
         title={product.title}
         allProd={products}
-        //cart={cart}
-        // setCart={setCart}
       />
     );
   });

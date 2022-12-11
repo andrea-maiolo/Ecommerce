@@ -4,7 +4,6 @@ import { useOutletContext } from "react-router-dom";
 const ProductCard = function (props) {
   const [quantity, setQuantity] = React.useState(1);
 
-  //this is something crazy so let see if it works
   const moveCart = useOutletContext();
   const { cart, setCart } = moveCart;
 
@@ -26,11 +25,6 @@ const ProductCard = function (props) {
     );
     currentProd = currentProd[0];
     currentProd.quantity = quantity;
-    // props.setCart((prevCart) => {
-    //   return [...prevCart, currentProd];
-    // });
-    // console.log(props.cart);
-    //cerchiamo di fare il miracolo
     setCart((prevCart) => {
       return [...prevCart, currentProd];
     });
