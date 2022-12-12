@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 const Products = () => {
   const thing = useOutletContext();
-  console.log(thing);
+  // console.log(thing);
   const { num, increaseNum, decreaseNum } = thing;
 
   //this is the old code

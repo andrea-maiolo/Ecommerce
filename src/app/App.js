@@ -1,25 +1,37 @@
 import { Outlet } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import React from "react";
 import Nav from "./components/Nav";
 
 const App = () => {
   const [cart, setCart] = useState([]);
-  // const [what, setWhat] = useState('what');
   const [num, setNum] = useState(1);
   const decreaseNum = () => setNum(num - 1);
   const increaseNum = () => setNum(num + 1);
-  // const stateObj = {
-  //   num,
-  //   setNum,
-  //   decreaseNum,
-  //   increaseNum,
-  // };
+
+  // let referenceCart = [];
+
+  let noReplicaCart = [];
+  noReplicaCart = cart.map((ele) => {
+    if (!noReplicaCart.includes(ele)) {
+      noReplicaCart.push(ele);
+      return noReplicaCart;
+    } else {
+      noReplicaCart.splice(noReplicaCart.indexOf(ele), 1);
+      return noReplicaCart;
+    }
+  });
+
+  useEffect(() => {
+    setCart(noReplicaCart);
+  }, [0]);
+
+  console.log("hello from app");
+  console.log(cart);
   return (
     <div>
-      <Nav num={num} />
+      <Nav cartL={cart.length} />
       <div className="content">
-        {/* <Outlet context={[cart, setCart]} /> */}
-        {/* <Outlet context={{ stateObj }} /> */}
         <Outlet
           context={{ num, setNum, decreaseNum, increaseNum, cart, setCart }}
         />

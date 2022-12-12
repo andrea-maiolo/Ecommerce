@@ -28,6 +28,7 @@ const ProductCard = function (props) {
     setCart((prevCart) => {
       return [...prevCart, currentProd];
     });
+    console.log("add to cart clicked");
     console.log(cart);
   }
   return (

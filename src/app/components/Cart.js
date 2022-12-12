@@ -5,8 +5,8 @@ import Footer from "./Footer";
 
 const Cart = () => {
   const cartDeconstructed = useOutletContext();
-  console.log("cartpage");
-  console.log(cartDeconstructed);
+  // console.log("cartpage");
+  // console.log(cartDeconstructed);
   const { cart, setCart } = cartDeconstructed;
 
   //in cart show me the products
