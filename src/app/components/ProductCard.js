@@ -25,9 +25,21 @@ const ProductCard = function (props) {
     );
     currentProd = currentProd[0];
     currentProd.quantity = quantity;
-    setCart((prevCart) => {
-      return [...prevCart, currentProd];
-    });
+
+    let filteredArrayRepliceCheck = cart.filter((ele) =>
+      ele.id === currentProd.id ? true : false
+    );
+
+    if (filteredArrayRepliceCheck.length > 0) {
+      filteredArrayRepliceCheck = filteredArrayRepliceCheck[0];
+      filteredArrayRepliceCheck.quantity += currentProd.quantity;
+    } else {
+      setCart((prevCart) => {
+        return [...prevCart, currentProd];
+      });
+    }
+
+    console.log(filteredArrayRepliceCheck);
     console.log("add to cart clicked");
     console.log(cart);
   }

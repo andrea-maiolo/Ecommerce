@@ -32,6 +32,7 @@ const Cart = () => {
       <CartCard
         key={product.id}
         id={product.id}
+        quantity={product.quantity}
         image={product.image}
         price={product.price}
         title={product.title}
