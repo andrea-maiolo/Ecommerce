@@ -23,13 +23,13 @@ const CartCard = function (props) {
     // show me the location of said product in cart
     // delete it from array
 
-    const referenceEle = e.target.parentElement;
+    const referenceEle = e.target.parentElement.id;
     console.log(referenceEle);
     console.log(cart);
-    // setCart((cart) => {
-    //   cart.splice(cart.indexOf(referenceEle), 1);
-    // });
-    // console.log(cart);
+    setCart((cart) => {
+      cart.splice(cart.indexOf(referenceEle), 1);
+    });
+    console.log(cart);
 
     // const referenceDiv = Number(e.target.parentElement.id);
     // let currentProd = props.allProd.filter((prod) =>

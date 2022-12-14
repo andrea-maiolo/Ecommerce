@@ -13,7 +13,9 @@ const App = () => {
 
   let noReplicaCart = [];
   noReplicaCart = cart.map((ele) => {
-    if (!noReplicaCart.includes(ele)) {
+    if (cart.length == 0) {
+      return;
+    } else if (!noReplicaCart.includes(ele)) {
       noReplicaCart.push(ele);
       return noReplicaCart;
     } else {
@@ -21,6 +23,7 @@ const App = () => {
       return noReplicaCart;
     }
   });
+  console.log(noReplicaCart);
 
   useEffect(() => {
     setCart(noReplicaCart);

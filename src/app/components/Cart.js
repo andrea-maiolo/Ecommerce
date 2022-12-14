@@ -43,7 +43,7 @@ const Cart = () => {
 
   return (
     <div>
-      <div>hello from cart</div>
+      <div>Your cart is empty, shop now!</div>
       {cartDom}
       <Footer />
     </div>
