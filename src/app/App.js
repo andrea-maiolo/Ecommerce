@@ -11,23 +11,23 @@ const App = () => {
 
   // let referenceCart = [];
 
-  let noReplicaCart = [];
-  noReplicaCart = cart.map((ele) => {
-    if (cart.length == 0) {
-      return;
-    } else if (!noReplicaCart.includes(ele)) {
-      noReplicaCart.push(ele);
-      return noReplicaCart;
-    } else {
-      noReplicaCart.splice(noReplicaCart.indexOf(ele), 1);
-      return noReplicaCart;
-    }
-  });
-  console.log(noReplicaCart);
+  // let noReplicaCart = [];
+  // if (cart.length !== 0) {
+  //   noReplicaCart = cart.map((ele) => {
+  //     if (!noReplicaCart.includes(ele)) {
+  //       noReplicaCart.push(ele);
+  //       return noReplicaCart;
+  //     } else {
+  //       noReplicaCart.splice(noReplicaCart.indexOf(ele), 1);
+  //       return noReplicaCart;
+  //     }
+  //   });
+  // }
+  // console.log(noReplicaCart);
 
-  useEffect(() => {
-    setCart(noReplicaCart);
-  }, [0]);
+  // useEffect(() => {
+  //   setCart(noReplicaCart);
+  // }, [0]);
 
   console.log("hello from app");
   console.log(cart);

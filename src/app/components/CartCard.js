@@ -49,11 +49,12 @@ const CartCard = function (props) {
       <img src={props.image} alt={props.title} className="prodImages" />
       <p className="prodTitle">{props.title}</p>
       <p className="prodPrice">{props.price} €</p>
-      <div className="prodQ">
+      {/* <div className="prodQ">
         <button onClick={handleSub}>-</button>
         <p>{quantity}</p>
         <button onClick={handlePlus}>+</button>
-      </div>
+      </div> */}
+      <p>{quantity}</p>
       <button onClick={removeFromCart}>REMOVE FROM CART</button>
     </div>
   );

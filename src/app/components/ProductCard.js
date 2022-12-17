@@ -8,7 +8,7 @@ const ProductCard = function (props) {
   const { cart, setCart } = moveCart;
 
   function handleSub() {
-    if (quantity === 0) {
+    if (quantity === 1) {
       return;
     }
     setQuantity((prevState) => prevState - 1);
@@ -31,17 +31,15 @@ const ProductCard = function (props) {
     );
 
     if (filteredArrayRepliceCheck.length > 0) {
-      filteredArrayRepliceCheck = filteredArrayRepliceCheck[0];
-      filteredArrayRepliceCheck.quantity += currentProd.quantity;
+      let finalQuantity =
+        currentProd.quantity + filteredArrayRepliceCheck[0].quantity;
+      let productToChange = cart.indexOf(filteredArrayRepliceCheck[0]);
+      cart[productToChange].quantity = finalQuantity;
     } else {
       setCart((prevCart) => {
         return [...prevCart, currentProd];
       });
     }
-
-    console.log(filteredArrayRepliceCheck);
-    console.log("add to cart clicked");
-    console.log(cart);
   }
   return (
     <div id={props.id} className="singleProduct">

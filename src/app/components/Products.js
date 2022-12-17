@@ -52,12 +52,6 @@ const Products = () => {
 
   return (
     <div>
-      <div>products</div>
-      <div>
-        <button onClick={decreaseNum}>-</button>
-        {num}
-        <button onClick={increaseNum}>+</button>
-      </div>
       {/* //old code */}
       <div className="shopPage">
         {loadingPage && (

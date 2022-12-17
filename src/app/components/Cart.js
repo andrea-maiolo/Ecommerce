@@ -5,14 +5,25 @@ import Footer from "./Footer";
 
 const Cart = () => {
   const cartDeconstructed = useOutletContext();
-  // console.log("cartpage");
-  // console.log(cartDeconstructed);
   const { cart, setCart } = cartDeconstructed;
 
-  //in cart show me the products
-  // an exact replica of products cart
+  // let noReplicaCart = [];
+  // if (cartDeconstructed.cart.length !== 0) {
+  //   noReplicaCart = cartDeconstructed.cart.map((ele) => {
+  //     if (!noReplicaCart.includes(ele)) {
+  //       noReplicaCart.push(ele);
+  //       return noReplicaCart;
+  //     } else {
+  //       noReplicaCart.splice(noReplicaCart.indexOf(ele), 1);
+  //       return noReplicaCart;
+  //     }
+  //   });
+  // }
+  // console.log(noReplicaCart);
 
-  // let currentCart = cart[0].title;
+  // React.useEffect(() => {
+  //   setCart(noReplicaCart);
+  // }, [0]);
 
   //from products
   const [redifinedCart, setRedifinedCart] = React.useState([]);
