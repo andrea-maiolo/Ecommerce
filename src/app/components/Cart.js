@@ -7,25 +7,6 @@ const Cart = () => {
   const cartDeconstructed = useOutletContext();
   const { cart, setCart } = cartDeconstructed;
 
-  // let noReplicaCart = [];
-  // if (cartDeconstructed.cart.length !== 0) {
-  //   noReplicaCart = cartDeconstructed.cart.map((ele) => {
-  //     if (!noReplicaCart.includes(ele)) {
-  //       noReplicaCart.push(ele);
-  //       return noReplicaCart;
-  //     } else {
-  //       noReplicaCart.splice(noReplicaCart.indexOf(ele), 1);
-  //       return noReplicaCart;
-  //     }
-  //   });
-  // }
-  // console.log(noReplicaCart);
-
-  // React.useEffect(() => {
-  //   setCart(noReplicaCart);
-  // }, [0]);
-
-  //from products
   const [redifinedCart, setRedifinedCart] = React.useState([]);
   React.useEffect(() => {
     let newCart = cart.map((obj) => ({
@@ -37,6 +18,7 @@ const Cart = () => {
     }));
     setRedifinedCart(newCart);
   }, [cart]);
+  console.log(cart);
 
   const cartDom = redifinedCart.map((product) => {
     return (
@@ -54,7 +36,7 @@ const Cart = () => {
 
   return (
     <div>
-      <div>Your cart is empty, shop now!</div>
+      {cart.length === 0 && <div>Your cart is empty, shop now!</div>}
       {cartDom}
       <Footer />
     </div>
