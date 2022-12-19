@@ -12,38 +12,33 @@ const CartCard = function (props) {
       //delete from cart
     }
     setQuantity((prevState) => prevState - 1);
+    const referenceEle = e.target.parentElement.parentElement;
+    cart.at(referenceEle).quantity -= 1;
   }
 
   function handlePlus(e) {
     setQuantity((prevState) => prevState + 1);
     const referenceEle = e.target.parentElement.parentElement;
-    cart.at(referenceEle).quantity = quantity;
-    console.log(cart);
+    cart.at(referenceEle).quantity += 1;
+  }
 
+  const removeFromCart = function (e) {
+    const referenceEle = e.target.parentElement;
+    console.log(referenceEle);
+    let myIndex = cart.indexOf(referenceEle);
+    console.log(myIndex);
     // setCart((cart) => {
-    //   cart.splice(cart.indexOf(referenceEle), 1);
+    //   cart.splice(cart[myIndex], 1);
     // });
-  }
 
-  function removeFromCart(e) {
-    //   // you clicked on a prod in cart
-    //   // show me the location of said product in cart
-    //   // delete it from array
-
-    //   const referenceEle = e.target.parentElement.id;
-    //   console.log(referenceEle);
-    //   console.log(cart);
-    //   setCart((cart) => {
-    //     cart.splice(cart.indexOf(referenceEle), 1);
-    //   });
     console.log(cart);
-  }
+  };
 
   return (
     <div id={props.id} className="singleProduct">
       <img src={props.image} alt={props.title} className="prodImages" />
       <p className="prodTitle">{props.title}</p>
-      <p className="prodPrice">{props.price} €</p>
+      <p className="prodPrice">{props.price * quantity} €</p>
       <div className="prodQ">
         <button onClick={handleSub}>-</button>
         <p>{quantity}</p>

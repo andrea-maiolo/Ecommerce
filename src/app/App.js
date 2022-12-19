@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import React from "react";
 import Nav from "./components/Nav";
 
@@ -9,34 +9,38 @@ const App = () => {
   const decreaseNum = () => setNum(num - 1);
   const increaseNum = () => setNum(num + 1);
 
-  // let referenceCart = [];
+  // function removeFromCart(e) {
+  //   //   // you clicked on a prod in cart
+  //   //   // show me the location of said product in cart
+  //   //   // delete it from array
 
-  // let noReplicaCart = [];
-  // if (cart.length !== 0) {
-  //   noReplicaCart = cart.map((ele) => {
-  //     if (!noReplicaCart.includes(ele)) {
-  //       noReplicaCart.push(ele);
-  //       return noReplicaCart;
-  //     } else {
-  //       noReplicaCart.splice(noReplicaCart.indexOf(ele), 1);
-  //       return noReplicaCart;
-  //     }
+  //   const referenceEle = e.target.parentElement;
+  //   console.log(referenceEle);
+  //   let myIndex = cart.at(referenceEle);
+  //   console.log(myIndex);
+  //   setCart((cart) => {
+  //     cart.splice(cart[myIndex], 1);
   //   });
-  // }
-  // console.log(noReplicaCart);
 
-  // useEffect(() => {
-  //   setCart(noReplicaCart);
-  // }, [0]);
+  //   console.log(cart);
+  // }
 
   console.log("hello from app");
   console.log(cart);
   return (
     <div>
-      <Nav cartL={cart.length} />
+      <Nav />
       <div className="content">
         <Outlet
-          context={{ num, setNum, decreaseNum, increaseNum, cart, setCart }}
+          context={{
+            num,
+            setNum,
+            decreaseNum,
+            increaseNum,
+            cart,
+            setCart,
+            // removeFromCart,
+          }}
         />
       </div>
     </div>
