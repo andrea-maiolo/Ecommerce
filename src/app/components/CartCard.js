@@ -7,31 +7,27 @@ const CartCard = function (props) {
   const [quantity, setQuantity] = React.useState(props.quantity);
 
   function handleSub(e) {
-    if (props.quantity === 0) {
+    if (quantity === 1) {
       return;
-      //delete from cart
     }
     setQuantity((prevState) => prevState - 1);
-    const referenceEle = e.target.parentElement.parentElement;
-    cart.at(referenceEle).quantity -= 1;
+
+    const referenceEle = Number(e.target.parentElement.parentElement.id);
+    const changeQuantity = cart.filter((obj) => obj.id == referenceEle);
+    changeQuantity[0].quantity -= 1;
   }
 
   function handlePlus(e) {
     setQuantity((prevState) => prevState + 1);
-    const referenceEle = e.target.parentElement.parentElement;
-    cart.at(referenceEle).quantity += 1;
+    const referenceEle = Number(e.target.parentElement.parentElement.id);
+    const changeQuantity = cart.filter((obj) => obj.id == referenceEle);
+    changeQuantity[0].quantity += 1;
   }
 
   const removeFromCart = function (e) {
-    const referenceEle = e.target.parentElement;
-    console.log(referenceEle);
-    let myIndex = cart.indexOf(referenceEle);
-    console.log(myIndex);
-    // setCart((cart) => {
-    //   cart.splice(cart[myIndex], 1);
-    // });
-
-    console.log(cart);
+    const referenceEle = Number(e.target.parentElement.id);
+    const result = cart.filter((obj) => obj.id !== referenceEle);
+    setCart(result);
   };
 
   return (
