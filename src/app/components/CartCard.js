@@ -34,7 +34,7 @@ const CartCard = function (props) {
     <div id={props.id} className="singleProduct">
       <img src={props.image} alt={props.title} className="prodImages" />
       <p className="prodTitle">{props.title}</p>
-      <p className="prodPrice">{props.price * quantity} €</p>
+      <p className="prodPrice">{props.price * quantity}€</p>
       <div className="prodQ">
         <button onClick={handleSub}>-</button>
         <p>{quantity}</p>
