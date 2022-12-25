@@ -19,7 +19,6 @@ const Cart = () => {
     }));
     setRedifinedCart(newCart);
   }, [cart]);
-  console.log(cart);
 
   const cartDom = redifinedCart.map((product) => {
     return (

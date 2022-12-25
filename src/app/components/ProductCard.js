@@ -17,10 +17,12 @@ const ProductCard = function (props) {
     );
 
     if (filteredArrayRepliceCheck.length > 0) {
-      let finalQuantity =
-        currentProd.quantity + filteredArrayRepliceCheck[0].quantity;
-      let productToChange = cart.indexOf(filteredArrayRepliceCheck[0]);
-      cart[productToChange].quantity = finalQuantity;
+      let indexToChange = cart.findIndex((ele) => ele.id === currentProd.id);
+      setCart((prevState) => {
+        const copyOfCart = [...prevState];
+        copyOfCart[indexToChange].quantity += 1;
+        return copyOfCart;
+      });
     } else {
       setCart((prevCart) => {
         return [...prevCart, currentProd];

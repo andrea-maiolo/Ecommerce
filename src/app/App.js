@@ -9,27 +9,9 @@ const App = () => {
   const decreaseNum = () => setNum(num - 1);
   const increaseNum = () => setNum(num + 1);
 
-  // function removeFromCart(e) {
-  //   //   // you clicked on a prod in cart
-  //   //   // show me the location of said product in cart
-  //   //   // delete it from array
-
-  //   const referenceEle = e.target.parentElement;
-  //   console.log(referenceEle);
-  //   let myIndex = cart.at(referenceEle);
-  //   console.log(myIndex);
-  //   setCart((cart) => {
-  //     cart.splice(cart[myIndex], 1);
-  //   });
-
-  //   console.log(cart);
-  // }
-
-  console.log("hello from app");
-  console.log(cart);
   return (
     <div>
-      <Nav />
+      <Nav cart={cart} />
       <div className="content">
         <Outlet
           context={{
@@ -39,7 +21,6 @@ const App = () => {
             increaseNum,
             cart,
             setCart,
-            // removeFromCart,
           }}
         />
       </div>

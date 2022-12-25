@@ -11,17 +11,24 @@ const CartCard = function (props) {
       return;
     }
     setQuantity((prevState) => prevState - 1);
-
     const referenceEle = Number(e.target.parentElement.parentElement.id);
-    const changeQuantity = cart.filter((obj) => obj.id == referenceEle);
-    changeQuantity[0].quantity -= 1;
+    let indexToChange = cart.findIndex((ele) => ele.id === referenceEle);
+    setCart((prevState) => {
+      const copyOfCart = [...prevState];
+      copyOfCart[indexToChange].quantity -= 1;
+      return copyOfCart;
+    });
   }
 
   function handlePlus(e) {
     setQuantity((prevState) => prevState + 1);
     const referenceEle = Number(e.target.parentElement.parentElement.id);
-    const changeQuantity = cart.filter((obj) => obj.id == referenceEle);
-    changeQuantity[0].quantity += 1;
+    let indexToChange = cart.findIndex((ele) => ele.id === referenceEle);
+    setCart((prevState) => {
+      const copyOfCart = [...prevState];
+      copyOfCart[indexToChange].quantity += 1;
+      return copyOfCart;
+    });
   }
 
   const removeFromCart = function (e) {
