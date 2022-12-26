@@ -17,18 +17,16 @@ const Nav = (props) => {
   }, [myCart]);
 
   return (
-    <div>
-      <div className="headerMain">
-        <h1 className="shopTitle">SHOPPE</h1>
-        <div className="navBarTop">
-          <Link to={"/"}>home</Link>
-          <Link to={"/products"}>products</Link>
-          <Link to={"/contacts"}>contacts</Link>
-        </div>
+    <div className="headerMain">
+      <h1 className="shopTitle">SHOPPE</h1>
+      <div className="navBarTop">
+        <Link to={"/"}>Home</Link>
+        <Link to={"/products"}>Products</Link>
+        <Link to={"/contacts"}>Contacts</Link>
+        <Link id="cart" to={"/cart"}>
+          Cart {totalNumberOfProducts}
+        </Link>
       </div>
-      <Link id="cart" to={"/cart"}>
-        cart {totalNumberOfProducts}
-      </Link>
     </div>
   );
 };

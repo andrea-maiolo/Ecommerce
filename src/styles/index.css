@@ -13,20 +13,22 @@ code {
     monospace;
 }
 
-/* header component*/
 .headerMain {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  border-bottom: #025496 0.2rem solid;
+  border-bottom: #3174a9 0.2rem solid;
+  margin: 1em;
+  background-color: #24273a;
+  height: 50px;
 }
 
 .shopTitle {
-  color: #025496;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #3174a9;
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
   font-weight: 700;
-  border: 3px #025496 dotted;
 }
 
 .navBarTop {
@@ -37,11 +39,12 @@ code {
 .navBarTop > a {
   margin: 1.2rem;
   text-decoration: none;
-  color: #025496;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #e4e0e0;
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  font-size: large;
 }
 
-/* footer component */
 .footerComp {
   display: flex;
   flex-direction: row;
@@ -68,7 +71,6 @@ code {
   margin: 0 1.2rem;
 }
 
-/* Our story */
 .homePage {
   display: flex;
   flex-direction: column;
@@ -84,25 +86,121 @@ code {
 
 .secondHeader {
   font-weight: 700;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #1d1d1f;
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  font-size: 48px;
 }
 
 .storytelling {
-  font-family: "Arial Narrow", Arial, sans-serif;
-  font-size: large;
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  color: #1d1d1f;
 }
 
-.firstLorem {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  line-height: 1.2rem;
-  margin: 0px 6.5rem 1.5rem 6.5rem;
+.buyLink {
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  margin-bottom: 0.2rem;
+  text-decoration: none;
 }
 
 .imageFrontPage {
   max-width: 80vw;
 }
 
-/* contact us page */
+.loadingPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loadT {
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  font-weight: 700;
+}
+
+.shopPage {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.shopPageLoaded {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.shopTheLatest {
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  font-weight: 700;
+}
+
+.prodsDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem 0.5rem;
+}
+
+.singleProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 5%;
+}
+
+.prodImages {
+  max-width: 200px;
+  max-height: 200px;
+  height: auto;
+}
+
+.prodTitle {
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  margin: 0.2rem;
+}
+
+.prodPrice {
+  font-size: 1.2rem;
+  margin: 0.2rem;
+}
+
+.prodQ {
+  display: flex;
+  align-items: center;
+}
+
+.addToCartButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: white;
+  font-size: 12 px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.singleProduct:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.addToCartButton:hover {
+  background-color: #444;
+}
 
 .contactUsPage {
   display: flex;
@@ -118,13 +216,22 @@ code {
 }
 
 .secondHeadCont {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
   font-weight: 700;
 }
 
 .pOfCont {
-  font-family: "Arial Narrow", Arial, sans-serif;
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
   font-size: large;
+}
+
+/* above this is all good  */
+
+#cart {
+  border: 1px solid black;
+  /* position: fixed; */
 }
 
 .myForm {
@@ -140,31 +247,36 @@ code {
 #firstNameInput {
   grid-area: firstName;
   height: 1.2rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
 }
 
 #lastNameInput {
   grid-area: lastName;
   height: 1.2rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
 }
 
 #emailInput {
   grid-area: email;
   height: 1.2rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
 }
 
 #subjectInput {
   grid-area: subject;
   height: 1.2rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
 }
 
 #messageInput {
   grid-area: message;
   height: 3rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
 }
 
 .buttonSub {
@@ -173,78 +285,6 @@ code {
   color: #fff;
   border-radius: 7px;
   height: 1.8rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-
-/* shop page */
-
-.shopPage {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-}
-
-.loadingPage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.loadT {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: 700;
-}
-
-.prodsDiv {
-  display: grid;
-  grid-template-areas:
-    "shopTheLatest shopTheLatest"
-    "email subject"
-    "message message"
-    "buttonSub buttonSub";
-  gap: 0.8rem 0.5rem;
-}
-
-.shopTheLatest {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: 700;
-  grid-area: shopTheLatest;
-}
-
-/* single product entries */
-
-.singleProduct {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.prodImages {
-  max-width: 200px;
-  max-height: 200px;
-}
-
-.prodTitle {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin: 0.2rem;
-}
-
-.prodPrice {
-  font-size: 1.2rem;
-  margin: 0.2rem;
-  color: #4b9ee0;
-}
-
-.prodQ {
-  display: flex;
-  align-items: center;
-}
-
-/* everything on cart and is button */
-
-#cart {
-  border: 1px solid black;
-  /* position: fixed; */
+  font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
 }

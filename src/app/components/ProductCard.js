@@ -35,7 +35,9 @@ const ProductCard = function (props) {
       <img src={props.image} alt={props.title} className="prodImages" />
       <p className="prodTitle">{props.title}</p>
       <p className="prodPrice">{props.price} €</p>
-      <button onClick={addToCart}>ADD TO CART</button>
+      <button className="addToCartButton" onClick={addToCart}>
+        ADD TO CART
+      </button>
     </div>
   );
 };

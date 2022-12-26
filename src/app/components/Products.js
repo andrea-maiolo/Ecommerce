@@ -57,9 +57,9 @@ const Products = () => {
           </div>
         )}
         {!loadingPage && (
-          <div className="prodsDiv">
+          <div className="shopPageLoaded">
             <h2 className="shopTheLatest">Shop the latest</h2>
-            {productsDom}
+            <div className="prodsDiv">{productsDom}</div>
           </div>
         )}
         <Footer />
