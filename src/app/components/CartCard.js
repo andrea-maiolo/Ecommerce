@@ -47,7 +47,12 @@ const CartCard = function (props) {
         <p>{quantity}</p>
         <button onClick={handlePlus}>+</button>
       </div>
-      <button onClick={removeFromCart}>REMOVE FROM CART</button>
+      <button onClick={removeFromCart}>
+        <img
+          alt="remove from cart"
+          src={require(`../../styles/delete.svg`).default}
+        />
+      </button>
     </div>
   );
 };

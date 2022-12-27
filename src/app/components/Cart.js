@@ -48,7 +48,7 @@ const Cart = () => {
   return (
     <div>
       {cart.length === 0 && <div>Your cart is empty, shop now!</div>}
-      {cartDom}
+      <div className="cartDiv">{cartDom}</div>
       <p>Total price {totalPrice}€</p>
       <button>BUY</button>
       <Footer />
