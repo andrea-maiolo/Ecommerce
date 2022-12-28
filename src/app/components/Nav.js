@@ -24,7 +24,13 @@ const Nav = (props) => {
         <Link to={"/products"}>Products</Link>
         <Link to={"/contacts"}>Contacts</Link>
         <Link id="cart" to={"/cart"}>
-          Cart {totalNumberOfProducts}
+          {/* <button onClick={removeFromCart}> */}
+          <img
+            alt="remove from cart"
+            src={require(`../../styles/cartFilled.svg`).default}
+          />
+          {/* </button> */}
+          {totalNumberOfProducts}
         </Link>
       </div>
     </div>
