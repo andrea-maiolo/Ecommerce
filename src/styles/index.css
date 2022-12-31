@@ -19,9 +19,8 @@ code {
   align-items: center;
   justify-content: space-around;
   border-bottom: #3174a9 0.2rem solid;
-  margin: 1em;
+  width: 100%;
   background-color: #24273a;
-  height: 50px;
 }
 
 .shopTitle {
@@ -287,4 +286,8 @@ code {
   height: 1.8rem;
   font-family: "SF Pro Display", "Helvetica Neue", "Helvetica", "Arial",
     sans-serif;
+}
+
+#cartSvg {
+  width: 66%;
 }

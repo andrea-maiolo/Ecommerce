@@ -8,7 +8,7 @@ function Home() {
       <main className="storySection">
         <h2 className="secondHeader">Buy it. Use it. Break it. Fix it.</h2>
         <h3 className="storytelling">
-          Fast and durable ssd cards for evry computer
+          Fast and durable ssd cards for every computer
         </h3>
         <Link to={"/products"} className="buyLink">
           Buy >

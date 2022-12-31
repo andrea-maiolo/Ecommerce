@@ -23,10 +23,10 @@ const Nav = (props) => {
         <Link to={"/"}>Home</Link>
         <Link to={"/products"}>Products</Link>
         <Link to={"/contacts"}>Contacts</Link>
-        <Link id="cart" to={"/cart"}>
-          {/* <button onClick={removeFromCart}> */}
+        <Link id="cartInNav" to={"/cart"}>
           <img
-            alt="remove from cart"
+            alt="your cart"
+            id="cartSvg"
             src={require(`../../styles/cartFilled.svg`).default}
           />
           {/* </button> */}
