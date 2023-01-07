@@ -157,6 +157,28 @@ code {
   border-radius: 5%;
 }
 
+.cartDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3em;
+  align-items: center;
+}
+
+.prodInCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 5%;
+  margin: 1em 0;
+  width: 75%;
+}
+
 .prodImages {
   max-width: 200px;
   max-height: 200px;
@@ -226,11 +248,30 @@ code {
   font-size: large;
 }
 
-/* above this is all good  */
+#cartSvg {
+  width: 66%;
+}
 
-#cart {
-  border: 1px solid black;
-  /* position: fixed; */
+#buyButton {
+  margin: 0 1rem;
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+#buyButton:hover {
+  background-color: #3e8e41;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#totalPriceP {
+  margin: 1rem;
 }
 
 .myForm {
@@ -288,6 +329,12 @@ code {
     sans-serif;
 }
 
-#cartSvg {
-  width: 66%;
+.toastNotification {
+  background-color: #3174a9;
+  color: #fff;
+  padding: 10px;
+  z-index: 1;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }

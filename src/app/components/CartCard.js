@@ -38,7 +38,7 @@ const CartCard = function (props) {
   };
 
   return (
-    <div id={props.id} className="singleProduct">
+    <div id={props.id} className="prodInCart">
       <img src={props.image} alt={props.title} className="prodImages" />
       <p className="prodTitle">{props.title}</p>
       <p className="prodPrice">{props.price * quantity}€</p>

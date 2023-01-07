@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom"; // optional
 import userEvent from "@testing-library/user-event";
-import RouteSwitch from "./RouteSwitch";
+import RouteSwitch from "../app/RouterSwitch";
 
 describe("RouteSwitch component", () => {
   it("renders the home page", () => {

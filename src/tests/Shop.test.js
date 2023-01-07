@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom"; // optional
 import userEvent from "@testing-library/user-event";
-import RouteSwitch from "./RouteSwitch";
+import RouteSwitch from "../app/RouterSwitch";
 
 describe("loading page should work accordingly to products readyness", () => {
   it("should render loading when products aren't ready", () => {

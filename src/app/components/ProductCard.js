@@ -28,8 +28,21 @@ const ProductCard = function (props) {
         return [...prevCart, currentProd];
       });
     }
-    alert("Item added to your cart");
+
+    showToast("Item added to your cart", 1500);
   }
+
+  function showToast(message, duration) {
+    const toast = document.createElement("div");
+    toast.innerText = message;
+    toast.className = "toastNotification";
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+      document.body.removeChild(toast);
+    }, duration);
+  }
+
   return (
     <div id={props.id} className="singleProduct">
       <img src={props.image} alt={props.title} className="prodImages" />
