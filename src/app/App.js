@@ -25,7 +25,6 @@ const App = () => {
           }}
         />
       </div>
-      <Home />
     </div>
   );
 };
