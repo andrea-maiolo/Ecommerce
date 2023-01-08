@@ -20,7 +20,7 @@ const Nav = (props) => {
     <div className="headerMain">
       <h1 className="shopTitle">SHOPPE</h1>
       <div className="navBarTop">
-        <Link to={"/"}>Home</Link>
+        <Link to={"/eCommerce"}>Home</Link>
         <Link to={"/products"}>Products</Link>
         <Link to={"/contacts"}>Contacts</Link>
         <Link id="cartInNav" to={"/cart"}>
