@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
 import Nav from "./components/Nav";
+import Home from "./components/Homepage";
 
 const App = () => {
   const [cart, setCart] = useState([]);
@@ -24,6 +25,7 @@ const App = () => {
           }}
         />
       </div>
+      <Home />
     </div>
   );
 };
