@@ -32,8 +32,11 @@ const CartCard = function (props) {
   }
 
   const removeFromCart = function (e) {
-    const referenceEle = Number(e.target.parentElement.id);
-    const result = cart.filter((obj) => obj.id !== referenceEle);
+    const referenceEle = e.target.parentElement.parentElement;
+    // console.log(referenceEle);
+    // console.log(referenceEle.id);
+    const result = cart.filter((obj) => obj.id !== Number(referenceEle.id));
+    // console.log(result);
     setCart(result);
   };
 

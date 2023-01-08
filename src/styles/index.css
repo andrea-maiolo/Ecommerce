@@ -338,3 +338,9 @@ code {
   bottom: 20px;
   right: 20px;
 }
+
+@media only screen and (max-width: 780px) {
+  .shopTitle {
+    display: none;
+  }
+}
