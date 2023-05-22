@@ -46,11 +46,11 @@ const Cart = () => {
   }, [cart]);
 
   return (
-    <div>
+    <div className="cartPage">
       {cart.length === 0 && <div>Your cart is empty, shop now!</div>}
+      <div className="cartDiv">{cartDom}</div>
       <p id="totalPriceP">Total price {totalPrice}€</p>
       <button id="buyButton">BUY</button>
-      <div className="cartDiv">{cartDom}</div>
       <Footer />
     </div>
   );

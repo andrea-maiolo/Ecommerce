@@ -70,6 +70,16 @@ code {
   margin: 0 1.2rem;
 }
 
+#logoInNav {
+  display: none;
+}
+
+#cartInNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .homePage {
   display: flex;
   flex-direction: column;
@@ -157,11 +167,17 @@ code {
   border-radius: 5%;
 }
 
-.cartDiv {
+.cartPage {
   display: flex;
   flex-direction: column;
-  margin: 0 3em;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+.cartDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 3em;
 }
 
 .prodInCart {
@@ -342,5 +358,14 @@ code {
 @media only screen and (max-width: 780px) {
   .shopTitle {
     display: none;
+  }
+
+  #logoInNav {
+    display: block;
+    max-width: 50px;
+  }
+
+  .contactUsPage {
+    height: 75vh;
   }
 }

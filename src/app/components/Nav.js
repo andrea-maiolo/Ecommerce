@@ -20,6 +20,10 @@ const Nav = (props) => {
     <div className="headerMain">
       <h1 className="shopTitle">SHOPPE</h1>
       <div className="navBarTop">
+        <img
+          id="logoInNav"
+          src="https://cdn.dribbble.com/users/976757/screenshots/5375959/05.jpg"
+        />
         <Link to={"/eCommerce"}>Home</Link>
         <Link to={"/products"}>Products</Link>
         <Link to={"/contacts"}>Contacts</Link>
