@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Nav = (props) => {
   const myCart = props.cart;
   const [totalNumberOfProducts, setTotalNumberOfProducts] = React.useState(0);
+  const [isClassActive, setIsClassActive] = React.useState(false);
 
   React.useEffect(() => {
     if (myCart === null) {
@@ -16,24 +17,35 @@ const Nav = (props) => {
     setTotalNumberOfProducts(totalProd);
   }, [myCart]);
 
+  let classNamesForCart = "cartInNav";
+  if (isClassActive) {
+    classNamesForCart += " active";
+  }
+
+  const handleClick = function () {
+    setIsClassActive(!isClassActive);
+  };
+
   return (
     <div className="headerMain">
       <h1 className="shopTitle">SHOPPE</h1>
-      <div className="navBarTop">
-        <img
-          id="logoInNav"
-          src="https://cdn.dribbble.com/users/976757/screenshots/5375959/05.jpg"
-        />
+      <img
+        id="logoInNav"
+        src="https://cdn.dribbble.com/users/976757/screenshots/5375959/05.jpg"
+      />
+      <div className={`navBarTop ${isClassActive ? "active" : ""}`}>
+        <button id="navPhoneBtn" onClick={handleClick}>
+          ☰
+        </button>
         <Link to={"/eCommerce"}>Home</Link>
         <Link to={"/products"}>Products</Link>
         <Link to={"/contacts"}>Contacts</Link>
-        <Link id="cartInNav" to={"/cart"}>
+        <Link className={classNamesForCart} to={"/cart"}>
           <img
             alt="your cart"
             id="cartSvg"
             src={require(`../../styles/cartFilled.svg`).default}
           />
-          {/* </button> */}
           {totalNumberOfProducts}
         </Link>
       </div>
